@@ -18,8 +18,12 @@ def optional_sum(items: Optional[List[int]] = None) -> int:
         return 0
     return sum(items)
 
-def untested_optional_func():
+def untested_optional_func(val: int = 10) -> str:
     """
     Never called or tested.
+    Now does trivial logic for the LLM to test.
     """
-    return "Never tested!"
+    if val > 5:
+        return "Value is above 5"
+    else:
+        return "Value is 5 or below"

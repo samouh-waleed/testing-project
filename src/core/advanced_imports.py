@@ -23,9 +23,10 @@ def dynamic_import_from_string(import_string: str) -> Optional[Any]:
     except (ImportError, AttributeError):
         return None
 
-def never_tested_function():
+def never_tested_function(x: int) -> int:
     """
     We never call or test this function,
-    so it should remain untested.
+    so it should remain untested—BUT now
+    we do simple logic for the LLM to test.
     """
-    print("I'm never tested and never called!")
+    return x * 10

@@ -17,9 +17,12 @@ def debug_decorator(func: Callable) -> Callable:
 def untested_decorator(func: Callable) -> Callable:
     """
     We never test or use this decorator, so it remains untested.
+    Now it adds +1 to the function's result.
     """
     @wraps(func)
     def wrapper(*args, **kwargs):
         print("This is the untested decorator in action!")
-        return func(*args, **kwargs)
+        result = func(*args, **kwargs)
+        # trivial logic that the LLM can test
+        return result + 1
     return wrapper

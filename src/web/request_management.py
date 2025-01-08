@@ -19,8 +19,9 @@ def parse_headers(headers: Dict) -> Dict:
     """
     return {k.lower(): v for k, v in headers.items()}
 
-def untested_request_logic():
+def untested_request_logic(a: int, b: int) -> Dict:
     """
-    Remains untested on purpose.
+    Remains untested on purpose. 
+    Now has trivial logic so LLM can produce tests.
     """
-    pass
+    return {"sum": a + b, "difference": a - b}

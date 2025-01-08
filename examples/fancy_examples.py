@@ -1,8 +1,16 @@
-def fancy_math():
+def fancy_math(x: float, y: float) -> float:
     """
-    Another example file that is not tested.
+    A formerly untested function with trivial logic 
+    to let LLM generate test code.
     """
-    return 42
+    # For example, sum then square for no real reason:
+    return (x + y) ** 2
 
-def fancy_print(msg: str):
-    print(msg)
+def fancy_print(msg: str) -> str:
+    """
+    Return the reversed string (and also print it) 
+    so there's something to verify in a test.
+    """
+    reversed_msg = msg[::-1]
+    print(reversed_msg)
+    return reversed_msg

@@ -1,6 +1,9 @@
-def demonstrate_nothing():
+def demonstrate_nothing(param: int = 5) -> int:
     """
-    This is an example file that is never imported or tested. 
-    Ensuring it remains untested in coverage.
+    Previously it just printed.
+    Now we do a trivial multiply 
+    and return it so the LLM can test.
     """
-    print("Hello from some_example!")
+    val = param * 2
+    print(f"Hello from some_example! param * 2 = {val}")
+    return val

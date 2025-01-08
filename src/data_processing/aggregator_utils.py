@@ -22,8 +22,9 @@ def sync_difference(a: float, b: float) -> float:
     """
     return a - b
 
-def never_used_aggregator_util():
+def never_used_aggregator_util(n: int) -> bool:
     """
     Function never used or tested, remains untested.
+    Now it has trivial logic (check if n is even).
     """
-    return "unused"
+    return (n % 2) == 0

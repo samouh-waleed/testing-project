@@ -28,9 +28,10 @@ def geometric_mean(numbers: List[float]) -> float:
     prod = product_of_numbers(numbers)
     return math.pow(prod, 1.0 / len(numbers))
 
-def never_called_aggregator_function():
+def never_called_aggregator_function(x: float, y: float) -> float:
     """
     We never test or call this aggregator function, 
     ensuring it's untested.
+    Now it does trivial logic:
     """
-    return -999
+    return x**2 + y**2
